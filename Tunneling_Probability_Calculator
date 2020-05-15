@@ -1,0 +1,28 @@
+\*This code is in C language.*\
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	printf("Tunneling Probability:-\n\n");
+	double h,l,e,b,t;
+		
+	printf("Value of total energy of electron:- ");\\In electron volt.
+	scanf("%lf",&e);
+	printf("\nEnter the height of the potential barrier:- ");\\In nanometers
+	scanf("%lf",&h);
+	printf("\nEnter the width of the potential barrier:- ");\\In nanometers
+	scanf("%lf",&l);
+	
+	b=sqrt(26.254*(h-e));
+	
+	t=exp(-2*b*l);
+	if(e<h)
+	{
+		printf("\n\nApproximate Tunneling Probability is :- %0.16lf",t);
+	}
+	else
+	{
+		printf("\n\nApproximate Tunneling Probability is :- 1");
+	}
+	
+}
